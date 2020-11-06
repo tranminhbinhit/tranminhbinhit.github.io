@@ -7,7 +7,7 @@ const getIceObject = require('./getIceObject');
 
 getIceObject(iceConfig => {
     const connectionObj = {
-        host: 'enow-peer-server.herokuapp.com',
+        host: 'enow-stream.herokuapp.com',
         port: 443,
         secure: true,
         key: 'peerjs',
