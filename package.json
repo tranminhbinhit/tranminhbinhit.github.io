@@ -1,7 +1,11 @@
 {
+  "license": "UNLICENSED",
   "dependencies": {
     "jquery": "^3.2.1",
     "peerjs": "^0.3.14",
     "uid": "^0.0.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.2.0"
   }
 }

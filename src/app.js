@@ -1,6 +1,7 @@
-const Peer = require('peerjs');
-const uid = require('uid');
+
 const $ = require('jquery');
+const uid = require('uid');
+const Peer = require('peerjs');
 const openStream = require('./openStream');
 const playVideo = require('./playVideo');
 const getIceObject = require('./getIceObject');
@@ -14,7 +15,7 @@ getIceObject(iceConfig => {
         config: iceConfig
     };
 
-    const peer = new Peer(getPeer(), connectionObj);
+    const peerData = new Peer(getPeer(), connectionObj);
 
     $('#btnCall').click(() => {
         const friendId = $('#txtFriendId').val();
@@ -25,9 +26,9 @@ getIceObject(iceConfig => {
         });
     });
 
-    peer.on('call', call => {
+    peerData.on('call', call => {
         openStream(stream => {
-            console.log('123123123')
+            console.log('00000')
             playVideo(stream, 'localStream');
             call.answer(stream);
             call.on('stream', remoteStream => playVideo(remoteStream, 'friendStream'));
@@ -38,6 +39,7 @@ getIceObject(iceConfig => {
 
 function getPeer() {
     const id = uid(10);
+    console.log(id, 'id ne');
     $('#peer-id').append(id);
     return id;
 }

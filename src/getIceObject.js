@@ -6,7 +6,7 @@ function getIceObject(cb) {
         data: {
             ident: "vanpho",
             secret: "2b1c2dfe-4374-11e7-bd72-5a790223a9ce",
-            domain: "vanpho93.github.io",
+            domain: "tranminhbinhit.github.io",
             application: "default",
             room: "default",
             secure: 1
